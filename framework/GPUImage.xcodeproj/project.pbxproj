@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF66B43726EF581400D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
+		AF66B43B26EF5B9200D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
 		BC09239E1C92658200A2ADFA /* ShaderProgram_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */; };
 		BC0923A11C92661D00A2ADFA /* Pipeline_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */; };
 		BC0923A21C92664900A2ADFA /* Framebuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB279EB1C8D11630013E213 /* Framebuffer.swift */; };
@@ -368,6 +370,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF66B43626EF581400D0301E /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
+		AF66B43826EF5B8700D0301E /* Grayscale_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Grayscale_GL.fsh; sourceTree = "<group>"; };
 		BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram_Tests.swift; path = Tests/ShaderProgram_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipeline_Tests.swift; path = Tests/Pipeline_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC1E12F41C9F2FD7008F844F /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ThreeInput.vsh; path = Source/Operations/Shaders/ThreeInput.vsh; sourceTree = "<group>"; };
@@ -830,6 +834,8 @@
 				BCA4E2381CC3161B007B51BA /* Vibrance_GL.fsh */,
 				BCA4E2441CC3EE85007B51BA /* HighlightAndShadowTint.swift */,
 				BCA4E2461CC3EE94007B51BA /* HighlightShadowTint_GL.fsh */,
+				AF66B43626EF581400D0301E /* Grayscale.swift */,
+				AF66B43826EF5B8700D0301E /* Grayscale_GL.fsh */,
 			);
 			name = "Color processing";
 			sourceTree = "<group>";
@@ -1345,6 +1351,7 @@
 				BC8B7A8F1CB5A84C00ACF7AA /* BoxBlur.swift in Sources */,
 				BC7FD17D1CB1CBA700037949 /* Crosshatch.swift in Sources */,
 				BC7FD0C31CB05F9F00037949 /* Posterize.swift in Sources */,
+				AF66B43726EF581400D0301E /* Grayscale.swift in Sources */,
 				BC4C85EE1C9F042900FD95D8 /* ConvertedShaders_GL.swift in Sources */,
 				BC7FD1731CB1C0E600037949 /* PolkaDot.swift in Sources */,
 				BC7FD18D1CB1D03600037949 /* GlassSphereRefraction.swift in Sources */,
@@ -1527,6 +1534,7 @@
 				BC9E35761E5256E500B8604F /* MissEtikateFilter.swift in Sources */,
 				BC9E353A1E524D8100B8604F /* ImageOrientation.swift in Sources */,
 				BC9E359A1E52575500B8604F /* HarrisCornerDetector.swift in Sources */,
+				AF66B43B26EF5B9200D0301E /* Grayscale.swift in Sources */,
 				BC9E358E1E52573000B8604F /* BoxBlur.swift in Sources */,
 				BC9E35611E5256A200B8604F /* TwoStageOperation.swift in Sources */,
 				BC9E35C41E5257DC00B8604F /* DarkenBlend.swift in Sources */,

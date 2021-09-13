@@ -85,6 +85,35 @@ let filterOperations: Array<FilterOperationInterface> = [
             filter.temperature = sliderValue
         },
         filterOperationType:.singleInput
+    ),FilterOperation(
+        filter:{Grayscale(type: .average)},
+        listName:"Grayscale(average)",
+        titleName:"Grayscale(average)",
+        sliderConfiguration:.enabled(minimumValue: 0, maximumValue: 1, initialValue: 1),
+        sliderUpdateCallback:{(filter, sliderValue) in
+            filter.intensity = sliderValue
+        },
+        filterOperationType:.singleInput
+    ),
+    FilterOperation(
+        filter:{Grayscale(type: .classic)},
+        listName:"Grayscale(classic)",
+        titleName:"Grayscale(classic)",
+        sliderConfiguration:.enabled(minimumValue: 0, maximumValue: 1, initialValue: 1),
+        sliderUpdateCallback:{(filter, sliderValue) in
+            filter.intensity = sliderValue
+        },
+        filterOperationType:.singleInput
+    ),
+    FilterOperation(
+        filter:{Grayscale(type: .desaturate)},
+        listName:"Grayscale(desaturate)",
+        titleName:"Grayscale(desaturate)",
+        sliderConfiguration:.enabled(minimumValue: 0, maximumValue: 1, initialValue: 1),
+        sliderUpdateCallback:{(filter, sliderValue) in
+            filter.intensity = sliderValue
+        },
+        filterOperationType:.singleInput
     ),
     FilterOperation(
         filter:{MonochromeFilter()},
