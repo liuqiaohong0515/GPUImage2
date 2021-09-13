@@ -11,7 +11,9 @@ public class RenderView:NSOpenGLView, ImageConsumer {
     public let maximumInputs:UInt = 1
     private lazy var displayShader:ShaderProgram = {
         sharedImageProcessingContext.makeCurrentContext()
-        self.openGLContext = sharedImageProcessingContext.context
+        runOnMainQueue {
+            self.openGLContext = sharedImageProcessingContext.context
+        }
         return sharedImageProcessingContext.passthroughShader
     }()
 
@@ -21,8 +23,11 @@ public class RenderView:NSOpenGLView, ImageConsumer {
         glBindFramebuffer(GLenum(GL_FRAMEBUFFER), 0)
         glBindRenderbuffer(GLenum(GL_RENDERBUFFER), 0)
 
-        let viewSize = GLSize(width:GLint(round(self.bounds.size.width)), height:GLint(round(self.bounds.size.height)))
-        glViewport(0, 0, viewSize.width, viewSize.height)
+        var viewSize: GLSize = .init(width: 0, height: 0)
+        runOnMainQueue {
+            viewSize = GLSize(width:GLint(round(self.bounds.size.width)), height:GLint(round(self.bounds.size.height)))
+            glViewport(0, 0, viewSize.width, viewSize.height)
+        }
 
         clearFramebufferWithColor(backgroundColor)
         
