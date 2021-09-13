@@ -77,20 +77,21 @@ class FilterShowcaseWindowController: NSWindowController {
         
         videoCamera.startCapture()
     }
+}
 
 // MARK: -
 // MARK: Table view delegate and datasource methods
-    
-    func numberOfRowsInTableView(_ aTableView:NSTableView!) -> Int {
+extension FilterShowcaseWindowController: NSTableViewDelegate, NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
         return filterOperations.count
     }
     
-    func tableView(_ aTableView:NSTableView!, objectValueForTableColumn aTableColumn:NSTableColumn!, row rowIndex:Int) -> AnyObject! {
-        let filterInList:FilterOperationInterface = filterOperations[rowIndex]
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        let filterInList:FilterOperationInterface = filterOperations[row]
         return filterInList.listName as NSString
     }
     
-    func tableViewSelectionDidChange(_ aNotification: Notification!) {
+    func tableViewSelectionDidChange(_ aNotification: Notification) {
         if let currentTableView = aNotification.object as? NSTableView {
             let rowIndex = currentTableView.selectedRow
             self.changeSelectedRow(rowIndex)
