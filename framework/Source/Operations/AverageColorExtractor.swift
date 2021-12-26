@@ -28,7 +28,7 @@ public class AverageColorExtractor: BasicOperation {
         super.init(vertexShader:AverageColorVertexShader, fragmentShader:AverageColorFragmentShader)
     }
 
-    override func renderFrame() {
+    public override func renderFrame() {
         averageColorBySequentialReduction(inputFramebuffer:inputFramebuffers[0]!, shader:shader, extractAverageOperation:extractAverageColorFromFramebuffer)
         releaseIncomingFramebuffers()
     }

@@ -9,7 +9,7 @@ public class Crop: BasicOperation {
         super.init(fragmentShader:PassthroughFragmentShader, numberOfInputs:1)
     }
 
-    override func renderFrame() {
+    public override func renderFrame() {
         let inputFramebuffer:Framebuffer = inputFramebuffers[0]!
         let inputSize = inputFramebuffer.sizeForTargetOrientation(.portrait)
         
