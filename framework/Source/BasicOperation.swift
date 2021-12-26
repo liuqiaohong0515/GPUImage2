@@ -41,13 +41,13 @@ open class BasicOperation: ImageProcessingOperation {
 
     public let targets = TargetContainer()
     public let sources = SourceContainer()
-    var shader:ShaderProgram
-    var inputFramebuffers = [UInt:Framebuffer]()
-    var renderFramebuffer:Framebuffer!
-    var outputFramebuffer:Framebuffer { get { return renderFramebuffer } }
-    let usesAspectRatio:Bool
-    let maskImageRelay = ImageRelay()
-    var maskFramebuffer:Framebuffer?
+    public var shader:ShaderProgram
+    public var inputFramebuffers = [UInt:Framebuffer]()
+    public var renderFramebuffer:Framebuffer!
+    public var outputFramebuffer:Framebuffer { get { return renderFramebuffer } }
+    public let usesAspectRatio:Bool
+    public let maskImageRelay = ImageRelay()
+    public var maskFramebuffer:Framebuffer?
     
     // MARK: -
     // MARK: Initialization and teardown
@@ -123,12 +123,12 @@ open class BasicOperation: ImageProcessingOperation {
         }
     }
     
-    func internalRenderFunction(_ inputFramebuffer:Framebuffer, textureProperties:[InputTextureProperties]) {
+    public func internalRenderFunction(_ inputFramebuffer:Framebuffer, textureProperties:[InputTextureProperties]) {
         renderQuadWithShader(shader, uniformSettings:uniformSettings, vertexBufferObject:sharedImageProcessingContext.standardImageVBO, inputTextures:textureProperties)
         releaseIncomingFramebuffers()
     }
     
-    func releaseIncomingFramebuffers() {
+    public func releaseIncomingFramebuffers() {
         var remainingFramebuffers = [UInt:Framebuffer]()
         // If all inputs are still images, have this output behave as one
         renderFramebuffer.timingStyle = .stillImage
@@ -159,7 +159,7 @@ open class BasicOperation: ImageProcessingOperation {
         }
     }
     
-    func initialTextureProperties() -> [InputTextureProperties] {
+    public func initialTextureProperties() -> [InputTextureProperties] {
         var inputTextureProperties = [InputTextureProperties]()
         
         if let outputRotation = overriddenOutputRotation {
@@ -175,7 +175,7 @@ open class BasicOperation: ImageProcessingOperation {
         return inputTextureProperties
     }
     
-    func configureFramebufferSpecificUniforms(_ inputFramebuffer:Framebuffer) {
+    public func configureFramebufferSpecificUniforms(_ inputFramebuffer:Framebuffer) {
         if usesAspectRatio {
             let outputRotation = overriddenOutputRotation ?? inputFramebuffer.orientation.rotationNeededForOrientation(.portrait)
             uniformSettings["aspectRatio"] = inputFramebuffer.aspectRatioForRotation(outputRotation)
