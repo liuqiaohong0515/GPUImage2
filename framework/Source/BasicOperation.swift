@@ -151,7 +151,7 @@ open class BasicOperation: ImageProcessingOperation {
         inputFramebuffers = remainingFramebuffers
     }
     
-    func sizeOfInitialStageBasedOnFramebuffer(_ inputFramebuffer:Framebuffer) -> GLSize {
+    public func sizeOfInitialStageBasedOnFramebuffer(_ inputFramebuffer:Framebuffer) -> GLSize {
         if let outputSize = overriddenOutputSize {
             return GLSize(outputSize)
         } else {
