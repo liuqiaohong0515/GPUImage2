@@ -7,20 +7,20 @@ import UIKit
 var imageProcessingShareGroup:EAGLSharegroup? = nil
 
 public class OpenGLContext: SerialDispatch {
-    lazy var framebufferCache:FramebufferCache = {
+    public lazy var framebufferCache:FramebufferCache = {
         return FramebufferCache(context:self)
     }()
-    var shaderCache:[String:ShaderProgram] = [:]
+    public var shaderCache:[String:ShaderProgram] = [:]
     public let standardImageVBO:GLuint
-    var textureVBOs:[Rotation:GLuint] = [:]
+    public var textureVBOs:[Rotation:GLuint] = [:]
 
-    let context:EAGLContext
+    public let context:EAGLContext
     
-    lazy var passthroughShader:ShaderProgram = {
+    public lazy var passthroughShader:ShaderProgram = {
         return crashOnShaderCompileFailure("OpenGLContext"){return try self.programForVertexShader(OneInputVertexShader, fragmentShader:PassthroughFragmentShader)}
     }()
 
-    lazy var coreVideoTextureCache:CVOpenGLESTextureCache = {
+    public lazy var coreVideoTextureCache:CVOpenGLESTextureCache = {
         var newTextureCache:CVOpenGLESTextureCache? = nil
         let err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, nil, self.context, nil, &newTextureCache)
         return newTextureCache!
