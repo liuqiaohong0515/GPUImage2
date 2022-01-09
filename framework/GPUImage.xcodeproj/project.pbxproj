@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AF66B43726EF581400D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
 		AF66B43B26EF5B9200D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
+		AFD9FCA6278B2A61007D49E2 /* FireEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */; };
+		AFD9FCA7278B2A90007D49E2 /* FireEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */; };
 		BC09239E1C92658200A2ADFA /* ShaderProgram_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */; };
 		BC0923A11C92661D00A2ADFA /* Pipeline_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */; };
 		BC0923A21C92664900A2ADFA /* Framebuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB279EB1C8D11630013E213 /* Framebuffer.swift */; };
@@ -372,6 +374,8 @@
 /* Begin PBXFileReference section */
 		AF66B43626EF581400D0301E /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
 		AF66B43826EF5B8700D0301E /* Grayscale_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Grayscale_GL.fsh; sourceTree = "<group>"; };
+		AFD9FCA2278B29DE007D49E2 /* FireEffect_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FireEffect_GL.fsh; path = Source/Operations/Shaders/FireEffect_GL.fsh; sourceTree = "<group>"; };
+		AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FireEffectFilter.swift; path = Source/Operations/FireEffectFilter.swift; sourceTree = "<group>"; };
 		BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram_Tests.swift; path = Tests/ShaderProgram_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipeline_Tests.swift; path = Tests/Pipeline_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC1E12F41C9F2FD7008F844F /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ThreeInput.vsh; path = Source/Operations/Shaders/ThreeInput.vsh; sourceTree = "<group>"; };
@@ -1063,6 +1067,8 @@
 				BCFF46DC1CBAB37B00A0C521 /* iOSBlur.swift */,
 				BCA4E22F1CC31276007B51BA /* Solarize.swift */,
 				BCA4E2311CC312EF007B51BA /* Solarize_GL.fsh */,
+				AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */,
+				AFD9FCA2278B29DE007D49E2 /* FireEffect_GL.fsh */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1371,6 +1377,7 @@
 				BCFB07951CBF399B009B2333 /* TextureOutput.swift in Sources */,
 				BCB825BB1CC9C96B00339790 /* Timestamp.swift in Sources */,
 				BC7FD0BF1CA77B1A00037949 /* KuwaharaRadius3Filter.swift in Sources */,
+				AFD9FCA6278B2A61007D49E2 /* FireEffectFilter.swift in Sources */,
 				BC7FD1081CB0778700037949 /* DarkenBlend.swift in Sources */,
 				BC7729661CB326DD004C9E0B /* ToonFilter.swift in Sources */,
 				BC7FD1161CB078ED00037949 /* LinearBurnBlend.swift in Sources */,
@@ -1554,6 +1561,7 @@
 				BC9E355B1E5252CC00B8604F /* BasicOperation.swift in Sources */,
 				BC9E35931E52574100B8604F /* UnsharpMask.swift in Sources */,
 				BC9E35AF1E52579900B8604F /* BulgeDistortion.swift in Sources */,
+				AFD9FCA7278B2A90007D49E2 /* FireEffectFilter.swift in Sources */,
 				BC9E35741E5256DE00B8604F /* LookupFilter.swift in Sources */,
 				BC9E35901E52573700B8604F /* Dilation.swift in Sources */,
 				BC9E35B71E5257B300B8604F /* ThresholdSketch.swift in Sources */,

@@ -989,6 +989,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback: nil,
         filterOperationType:.singleInput
     ),
+    FilterOperation(filter: {FireEffectFilter()}, listName: "FireEffect", titleName: "FireEffect", sliderConfiguration: .disabled, sliderUpdateCallback: nil, filterOperationType: .singleInput),
     // TODO: Perlin noise
     // TODO: JFAVoronoi
     // TODO: Mosaic
