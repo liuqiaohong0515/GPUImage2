@@ -25,7 +25,7 @@ public class RenderView:NSOpenGLView, ImageConsumer {
 
         var viewSize: GLSize = .init(width: 0, height: 0)
         runOnMainQueue {
-            viewSize = GLSize(width:GLint(round(self.bounds.size.width)), height:GLint(round(self.bounds.size.height)))
+            viewSize = GLSize(width:GLint(round(self.bounds.size.width * (NSScreen.main?.backingScaleFactor ?? 1))), height:GLint(round(self.bounds.size.height * (NSScreen.main?.backingScaleFactor ?? 1))))
             glViewport(0, 0, viewSize.width, viewSize.height)
         }
 
