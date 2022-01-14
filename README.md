@@ -24,9 +24,9 @@ Currently, GPUImage uses Lode Vandevenne's <a href="https://lodev.org/lodepng/">
 
 ## Technical requirements ##
 
-- Swift 3
-- Xcode 8.0 on Mac or iOS
-- iOS: 8.0 or higher (Swift is supported on 7.0, but not Mac-style frameworks)
+- Swift 5
+- Xcode 11.0 on Mac or iOS
+- iOS: 11.0 or higher (Swift is supported on 7.0, but not Mac-style frameworks)
 - OSX: 10.9 or higher
 - Linux: Wherever Swift code can be compiled. Currently, that's Ubuntu 14.04 or higher, along with the many other places it has been ported to. I've gotten this running on the latest Raspbian, for example. For camera input, Video4Linux needs to be installed.
 
@@ -59,7 +59,7 @@ Note that you may need to build your project once to parse and build the GPUImag
 This project supports the Swift Package Manager, so you should be able to add it as a dependency in your Package.swift file like the following:
 
 ```
-.package(url: "https://github.com/BradLarson/GPUImage2.git", from: "0.0.1"), 
+.package(url: "https://github.com/liuqiaohong0515/GPUImage2.git", from: "0.0.1"), 
 ```
 
 along with an 
