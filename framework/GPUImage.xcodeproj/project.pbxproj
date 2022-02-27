@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF37CF1F27CB8772001C3074 /* FastBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CF1E27CB8772001C3074 /* FastBlur.swift */; };
+		AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = AF37CF2027CB87D9001C3074 /* FastBlur_GL.fsh */; };
+		AF37CF2327CB8D80001C3074 /* FastBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37CF1E27CB8772001C3074 /* FastBlur.swift */; };
 		AF66B43726EF581400D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
 		AF66B43B26EF5B9200D0301E /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66B43626EF581400D0301E /* Grayscale.swift */; };
 		AFD9FCA6278B2A61007D49E2 /* FireEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */; };
@@ -372,6 +375,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF37CF1E27CB8772001C3074 /* FastBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FastBlur.swift; path = Source/Operations/FastBlur.swift; sourceTree = "<group>"; };
+		AF37CF2027CB87D9001C3074 /* FastBlur_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FastBlur_GL.fsh; path = Source/Operations/Shaders/FastBlur_GL.fsh; sourceTree = "<group>"; };
 		AF66B43626EF581400D0301E /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
 		AF66B43826EF5B8700D0301E /* Grayscale_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Grayscale_GL.fsh; sourceTree = "<group>"; };
 		AFD9FCA2278B29DE007D49E2 /* FireEffect_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = FireEffect_GL.fsh; path = Source/Operations/Shaders/FireEffect_GL.fsh; sourceTree = "<group>"; };
@@ -1069,6 +1074,8 @@
 				BCA4E2311CC312EF007B51BA /* Solarize_GL.fsh */,
 				AFD9FCA5278B2A61007D49E2 /* FireEffectFilter.swift */,
 				AFD9FCA2278B29DE007D49E2 /* FireEffect_GL.fsh */,
+				AF37CF1E27CB8772001C3074 /* FastBlur.swift */,
+				AF37CF2027CB87D9001C3074 /* FastBlur_GL.fsh */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1321,6 +1328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,6 +1390,7 @@
 				BC7729661CB326DD004C9E0B /* ToonFilter.swift in Sources */,
 				BC7FD1161CB078ED00037949 /* LinearBurnBlend.swift in Sources */,
 				BCFF468C1CB7417700A0C521 /* Dilation.swift in Sources */,
+				AF37CF1F27CB8772001C3074 /* FastBlur.swift in Sources */,
 				BCFF46A81CB7488900A0C521 /* OpeningFilter.swift in Sources */,
 				BCFF46BA1CB8A7F300A0C521 /* SoftElegance.swift in Sources */,
 				BC7FD09A1CA62ED100037949 /* ExposureAdjustment.swift in Sources */,
@@ -1566,6 +1575,7 @@
 				BC9E35901E52573700B8604F /* Dilation.swift in Sources */,
 				BC9E35B71E5257B300B8604F /* ThresholdSketch.swift in Sources */,
 				BC9E35711E5256D500B8604F /* LevelsAdjustment.swift in Sources */,
+				AF37CF2327CB8D80001C3074 /* FastBlur.swift in Sources */,
 				BC9E358A1E52572600B8604F /* HistogramDisplay.swift in Sources */,
 				BC9E35BC1E5257C200B8604F /* Solarize.swift in Sources */,
 				BC9E35C11E5257D300B8604F /* ColorBlend.swift in Sources */,
