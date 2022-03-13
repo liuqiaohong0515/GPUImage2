@@ -1,19 +1,11 @@
 import Foundation
 
 public var standardProcessingQueue:DispatchQueue {
-if #available(iOS 10, OSX 10.10, *) {
-        return DispatchQueue.global(qos: .default)
-} else {
-        return DispatchQueue.global(priority: .default)
-    }
+    return DispatchQueue.global(qos: .default)
 }
 
 public var lowProcessingQueue:DispatchQueue {
-if #available(iOS 10, OSX 10.10, *) {
-        return DispatchQueue.global(qos: .background)
-} else {
-        return DispatchQueue.global(priority: .low)
-    }
+    return DispatchQueue.global(qos: .background)
 }
 
 func runAsynchronouslyOnMainQueue(_ mainThreadOperation:@escaping () -> ()) {
