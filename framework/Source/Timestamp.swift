@@ -25,7 +25,7 @@ public struct Timestamp: Comparable {
         self.epoch = epoch
     }
     
-    func seconds() -> Double {
+    public func seconds() -> Double {
         return Double(value) / Double(timescale)
     }
 }

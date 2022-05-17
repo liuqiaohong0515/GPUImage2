@@ -67,7 +67,7 @@ public class OpenGLContext: SerialDispatch {
     // MARK: -
     // MARK: Device capabilities
 
-    func supportsTextureCaches() -> Bool {
+    public func supportsTextureCaches() -> Bool {
         return false
     }
     

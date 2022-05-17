@@ -30,14 +30,14 @@ public enum FramebufferTimingStyle {
     case stillImage
     case videoFrame(timestamp:Timestamp)
     
-    func isTransient() -> Bool {
+    public func isTransient() -> Bool {
         switch self {
             case .stillImage: return false
             case .videoFrame: return true
         }
     }
     
-    var timestamp:Timestamp? {
+    public var timestamp:Timestamp? {
         get {
             switch self {
                 case .stillImage: return nil
