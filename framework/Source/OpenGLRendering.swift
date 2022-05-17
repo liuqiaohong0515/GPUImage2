@@ -125,7 +125,7 @@ public func clearFramebufferWithColor(_ color:Color) {
     glClear(GLenum(GL_COLOR_BUFFER_BIT))
 }
 
-func renderStencilMaskFromFramebuffer(_ framebuffer:Framebuffer) {
+public func renderStencilMaskFromFramebuffer(_ framebuffer:Framebuffer) {
     let inputTextureProperties = framebuffer.texturePropertiesForOutputRotation(.noRotation)
     glEnable(GLenum(GL_STENCIL_TEST))
     glClearStencil(0)
@@ -153,7 +153,7 @@ func renderStencilMaskFromFramebuffer(_ framebuffer:Framebuffer) {
 #endif
 }
 
-func disableStencil() {
+public func disableStencil() {
     glDisable(GLenum(GL_STENCIL_TEST))
 }
 
