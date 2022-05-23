@@ -13,10 +13,10 @@ public struct TimestampFlags: OptionSet {
 }
 
 public struct Timestamp: Comparable {
-    let value:Int64
-    let timescale:Int32
-    let flags:TimestampFlags
-    let epoch:Int64
+    public let value:Int64
+    public let timescale:Int32
+    public let flags:TimestampFlags
+    public let epoch:Int64
     
     public init(value:Int64, timescale:Int32, flags:TimestampFlags, epoch:Int64) {
         self.value = value
