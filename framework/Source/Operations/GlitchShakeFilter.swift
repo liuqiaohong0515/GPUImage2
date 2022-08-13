@@ -6,7 +6,7 @@
 //  Copyright © 2022 HDLX Software LLC. All rights reserved.
 //
 
-import Darwin
+import Foundation
 public class GlitchShakeFilter: BasicOperation {
     public var scale: Float = 0.0 { didSet { uniformSettings["scale"] = scale } }
     
