@@ -1201,4 +1201,15 @@ let filterOperations: Array<FilterOperationInterface> = [
     ),
     
     // TODO: Poisson blend
+    
+    
+    // TODO: Glitch
+    FilterOperation(
+        filter:{GlitchShakeFilter()},
+        listName:"Glitch Shake",
+        titleName:"Glitch Shake",
+        sliderConfiguration:.disabled,
+        sliderUpdateCallback:nil,
+        filterOperationType:.blend
+    ),
 ]

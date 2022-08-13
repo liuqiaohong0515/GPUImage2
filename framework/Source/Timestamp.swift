@@ -28,6 +28,10 @@ public struct Timestamp: Comparable {
     public func seconds() -> Double {
         return Double(value) / Double(timescale)
     }
+    
+    public func millisecond() -> UInt64 {
+        return (UInt64(value) * 1000) / UInt64(timescale)
+    }
 }
 
 public func ==(x:Timestamp, y:Timestamp) -> Bool {

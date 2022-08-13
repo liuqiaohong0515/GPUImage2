@@ -27,7 +27,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This application uses the camera to filter and display video.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016 Sunset Lake Software LLC. All rights reserved.</string>
+	<string>Copyright © 2016 HDLX Software LLC. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

@@ -355,6 +355,10 @@
 		BCFF46FC1CBAF85000A0C521 /* TransformOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF46FB1CBAF85000A0C521 /* TransformOperation.swift */; };
 		BCFF46FE1CBB0C1F00A0C521 /* AverageColorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF46FD1CBB0C1F00A0C521 /* AverageColorExtractor.swift */; };
 		BCFF47081CBB443B00A0C521 /* CameraConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF47071CBB443B00A0C521 /* CameraConversion.swift */; };
+		DE2DC2FC28A77B10008323B2 /* GlitchShakeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */; };
+		DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */; };
+		DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */; };
+		DE2DC30328A79CD8008323B2 /* GlitchShakeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -692,6 +696,9 @@
 		BCFF46FF1CBB0D8900A0C521 /* AverageColor_GL.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AverageColor_GL.fsh; path = Source/Operations/Shaders/AverageColor_GL.fsh; sourceTree = "<group>"; };
 		BCFF47001CBB0D8900A0C521 /* AverageColor.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AverageColor.vsh; path = Source/Operations/Shaders/AverageColor.vsh; sourceTree = "<group>"; };
 		BCFF47071CBB443B00A0C521 /* CameraConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraConversion.swift; path = Source/CameraConversion.swift; sourceTree = "<group>"; };
+		DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchShakeFilter.swift; path = Source/Operations/GlitchShakeFilter.swift; sourceTree = "<group>"; };
+		DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchShakeFilter_GL.fsh; path = Source/Operations/Shaders/GlitchShakeFilter_GL.fsh; sourceTree = "<group>"; };
+		DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchShakeFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchShakeFilter_GLES.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1174,12 +1181,23 @@
 				BCFF46EB1CBAF78D00A0C521 /* NearbyTexelSampling.vsh */,
 				BC8B7A8C1CB5A6C500ACF7AA /* TwoStageOperation.swift */,
 				BCFF46A51CB7428C00A0C521 /* OperationGroup.swift */,
+				DE2DC2FA28A77AC6008323B2 /* Glitch */,
 				BC4C85F31C9F114600FD95D8 /* Color processing */,
 				BC4EE14A1CB33BBF00AD8A65 /* Image processing */,
 				BC7FD0A91CA76F9F00037949 /* Effects */,
 				BC1E12F81C9F4C69008F844F /* Blends */,
 			);
 			name = Operations;
+			sourceTree = "<group>";
+		};
+		DE2DC2FA28A77AC6008323B2 /* Glitch */ = {
+			isa = PBXGroup;
+			children = (
+				DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */,
+				DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */,
+				DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */,
+			);
+			name = Glitch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1328,6 +1346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1343,6 +1362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,6 +1454,7 @@
 				BC38D53222AEE161000AE4F9 /* OpenGLContext-OpenGL.swift in Sources */,
 				BC7FD11A1CB0793900037949 /* MultiplyBlend.swift in Sources */,
 				BC38D52922AEE0B8000AE4F9 /* MovieInput.swift in Sources */,
+				DE2DC2FC28A77B10008323B2 /* GlitchShakeFilter.swift in Sources */,
 				BCA4E2591CC3F832007B51BA /* ColorLocalBinaryPattern.swift in Sources */,
 				BC4EE1561CB3457800AD8A65 /* PrewittEdgeDetection.swift in Sources */,
 				BCFF46D31CB9C24500A0C521 /* HarrisCornerDetector.swift in Sources */,
@@ -1619,6 +1640,7 @@
 				BC9E35401E524D8900B8604F /* Size.swift in Sources */,
 				BC9E35441E524D9000B8604F /* FillMode.swift in Sources */,
 				BC38D52A22AEE0B8000AE4F9 /* MovieInput.swift in Sources */,
+				DE2DC30328A79CD8008323B2 /* GlitchShakeFilter.swift in Sources */,
 				BC9E35641E5256B200B8604F /* BrightnessAdjustment.swift in Sources */,
 				BC9E35A41E52577600B8604F /* KuwaharaRadius3Filter.swift in Sources */,
 				BC9E35D41E52580D00B8604F /* SubtractBlend.swift in Sources */,
