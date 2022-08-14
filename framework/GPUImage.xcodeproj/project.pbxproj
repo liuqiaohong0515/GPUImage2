@@ -359,6 +359,10 @@
 		DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */; };
 		DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */; };
 		DE2DC30328A79CD8008323B2 /* GlitchShakeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */; };
+		DE2DC30528A8E546008323B2 /* GlitchSoulOutFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */; };
+		DE2DC30928A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */; };
+		DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */; };
+		DE2DC30C28A8EBC1008323B2 /* GlitchSoulOutFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -699,6 +703,9 @@
 		DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchShakeFilter.swift; path = Source/Operations/GlitchShakeFilter.swift; sourceTree = "<group>"; };
 		DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchShakeFilter_GL.fsh; path = Source/Operations/Shaders/GlitchShakeFilter_GL.fsh; sourceTree = "<group>"; };
 		DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchShakeFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchShakeFilter_GLES.fsh; sourceTree = "<group>"; };
+		DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchSoulOutFilter.swift; path = Source/Operations/GlitchSoulOutFilter.swift; sourceTree = "<group>"; };
+		DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchSoulOutFilter_GL.fsh; path = Source/Operations/Shaders/GlitchSoulOutFilter_GL.fsh; sourceTree = "<group>"; };
+		DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchSoulOutFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchSoulOutFilter_GLES.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1196,6 +1203,9 @@
 				DE2DC2FB28A77B10008323B2 /* GlitchShakeFilter.swift */,
 				DE2DC2FD28A79680008323B2 /* GlitchShakeFilter_GL.fsh */,
 				DE2DC30128A7970B008323B2 /* GlitchShakeFilter_GLES.fsh */,
+				DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */,
+				DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */,
+				DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */,
 			);
 			name = Glitch;
 			sourceTree = "<group>";
@@ -1348,6 +1358,7 @@
 			files = (
 				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
+				DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,6 +1373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2DC30928A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh in Resources */,
 				DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1488,6 +1500,7 @@
 				BCBEC0E01CCD492D00B70ED7 /* HistogramEqualization.swift in Sources */,
 				BC7FD0F91CB063B700037949 /* Color.swift in Sources */,
 				BCFF46DF1CBAB66F00A0C521 /* CannyEdgeDetection.swift in Sources */,
+				DE2DC30C28A8EBC1008323B2 /* GlitchSoulOutFilter.swift in Sources */,
 				BCFF46BC1CB8AB1B00A0C521 /* TiltShift.swift in Sources */,
 				BC77295A1CB30B4E004C9E0B /* Convolution3x3.swift in Sources */,
 				BCE111AB1CBC9B1F005293A4 /* MotionDetector.swift in Sources */,
@@ -1694,6 +1707,7 @@
 				BC9E35A81E52578400B8604F /* Vignette.swift in Sources */,
 				BC9E355A1E5252C400B8604F /* TextureOutput.swift in Sources */,
 				BC9E35841E52571300B8604F /* ColorLocalBinaryPattern.swift in Sources */,
+				DE2DC30528A8E546008323B2 /* GlitchSoulOutFilter.swift in Sources */,
 				BC9E357C1E5256F800B8604F /* AverageLuminanceExtractor.swift in Sources */,
 				BC9E35AB1E52578C00B8604F /* PolkaDot.swift in Sources */,
 				BC9E35421E524D8C00B8604F /* Matrix.swift in Sources */,

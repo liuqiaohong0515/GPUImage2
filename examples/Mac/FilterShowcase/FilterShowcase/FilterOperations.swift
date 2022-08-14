@@ -1210,6 +1210,15 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Glitch Shake",
         sliderConfiguration:.disabled,
         sliderUpdateCallback:nil,
-        filterOperationType:.blend
+        filterOperationType:.singleInput
+    ),
+    
+    FilterOperation(
+        filter:{GlitchSoulOutFilter()},
+        listName:"Glitch Soul Out",
+        titleName:"Glitch Soul Out",
+        sliderConfiguration:.disabled,
+        sliderUpdateCallback:nil,
+        filterOperationType:.singleInput
     ),
 ]
