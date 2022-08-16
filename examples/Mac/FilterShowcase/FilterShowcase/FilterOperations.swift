@@ -1212,11 +1212,18 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback:nil,
         filterOperationType:.singleInput
     ),
-    
     FilterOperation(
         filter:{GlitchSoulOutFilter()},
         listName:"Glitch Soul Out",
         titleName:"Glitch Soul Out",
+        sliderConfiguration:.disabled,
+        sliderUpdateCallback:nil,
+        filterOperationType:.singleInput
+    ),
+    FilterOperation(
+        filter:{GlitchGlitchFilter()},
+        listName:"Glitch Glitch",
+        titleName:"Glitch Glitch",
         sliderConfiguration:.disabled,
         sliderUpdateCallback:nil,
         filterOperationType:.singleInput

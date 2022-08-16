@@ -363,6 +363,9 @@
 		DE2DC30928A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */; };
 		DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */; };
 		DE2DC30C28A8EBC1008323B2 /* GlitchSoulOutFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */; };
+		DE656F5728ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */; };
+		DE656F5928ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */; };
+		DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -706,6 +709,9 @@
 		DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchSoulOutFilter.swift; path = Source/Operations/GlitchSoulOutFilter.swift; sourceTree = "<group>"; };
 		DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchSoulOutFilter_GL.fsh; path = Source/Operations/Shaders/GlitchSoulOutFilter_GL.fsh; sourceTree = "<group>"; };
 		DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchSoulOutFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchSoulOutFilter_GLES.fsh; sourceTree = "<group>"; };
+		DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchGlitchFilter.swift; path = Source/Operations/GlitchGlitchFilter.swift; sourceTree = "<group>"; };
+		DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchGlitchFilter_GL.fsh; path = Source/Operations/Shaders/GlitchGlitchFilter_GL.fsh; sourceTree = "<group>"; };
+		DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchGlitchFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchGlitchFilter_GLES.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1206,6 +1212,9 @@
 				DE2DC30428A8E546008323B2 /* GlitchSoulOutFilter.swift */,
 				DE2DC30628A8E9B5008323B2 /* GlitchSoulOutFilter_GL.fsh */,
 				DE2DC30828A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh */,
+				DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */,
+				DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */,
+				DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */,
 			);
 			name = Glitch;
 			sourceTree = "<group>";
@@ -1358,6 +1367,7 @@
 			files = (
 				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
+				DE656F5928ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh in Resources */,
 				DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1375,6 +1385,7 @@
 			files = (
 				DE2DC30928A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh in Resources */,
 				DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */,
+				DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1542,6 +1553,7 @@
 				BC4EE16C1CB34D7B00AD8A65 /* RawDataInput.swift in Sources */,
 				BC7FD1181CB0791200037949 /* LuminosityBlend.swift in Sources */,
 				BC7FD09C1CA62F6300037949 /* ContrastAdjustment.swift in Sources */,
+				DE656F5728ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift in Sources */,
 				BC7FD1891CB1CEFF00037949 /* SphereRefraction.swift in Sources */,
 				BC7FD1851CB1CE0D00037949 /* PinchDistortion.swift in Sources */,
 				BC38D52722AEE0B8000AE4F9 /* Camera.swift in Sources */,
