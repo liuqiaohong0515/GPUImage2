@@ -3,7 +3,7 @@
 //  GPUImage_iOS
 //
 //  Created by 刘乔泓 on 2022/8/14.
-//  Copyright © 2022 Sunset Lake Software LLC. All rights reserved.
+//  Copyright © 2022 HDLX Software LLC. All rights reserved.
 //
 
 import Foundation

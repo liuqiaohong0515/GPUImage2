@@ -366,6 +366,9 @@
 		DE656F5728ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */; };
 		DE656F5928ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */; };
 		DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */; };
+		DE6ADBF228AD2B8D00F942B5 /* GlitchVertigoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */; };
+		DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */; };
+		DE6ADBF628AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -712,6 +715,9 @@
 		DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchGlitchFilter.swift; path = Source/Operations/GlitchGlitchFilter.swift; sourceTree = "<group>"; };
 		DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchGlitchFilter_GL.fsh; path = Source/Operations/Shaders/GlitchGlitchFilter_GL.fsh; sourceTree = "<group>"; };
 		DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchGlitchFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchGlitchFilter_GLES.fsh; sourceTree = "<group>"; };
+		DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchVertigoFilter.swift; path = Source/Operations/GlitchVertigoFilter.swift; sourceTree = "<group>"; };
+		DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchVertigoFilter_GL.fsh; path = Source/Operations/Shaders/GlitchVertigoFilter_GL.fsh; sourceTree = "<group>"; };
+		DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchVertigoFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchVertigoFilter_GLES.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1215,6 +1221,9 @@
 				DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */,
 				DE656F5828ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh */,
 				DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */,
+				DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */,
+				DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */,
+				DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */,
 			);
 			name = Glitch;
 			sourceTree = "<group>";
@@ -1365,8 +1374,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6ADBF628AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh in Resources */,
 				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
+				DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */,
 				DE656F5928ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh in Resources */,
 				DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */,
 			);
@@ -1468,6 +1479,7 @@
 				BC7FD1791CB1C97700037949 /* PolarPixellate.swift in Sources */,
 				BC4EE1621CB348CB00AD8A65 /* ThresholdSketch.swift in Sources */,
 				BC7FD09E1CA6301B00037949 /* GammaAdjustment.swift in Sources */,
+				DE6ADBF228AD2B8D00F942B5 /* GlitchVertigoFilter.swift in Sources */,
 				BCE111A91CBC9960005293A4 /* AverageLuminanceThreshold.swift in Sources */,
 				BCFF46C41CB9565F00A0C521 /* MotionBlur.swift in Sources */,
 				BC7FD0FB1CB0663C00037949 /* ShaderUniformSettings.swift in Sources */,

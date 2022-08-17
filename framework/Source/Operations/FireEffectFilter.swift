@@ -3,7 +3,7 @@
 //  GPUImage_macOS
 //
 //  Created by 刘乔泓 on 2022/1/9.
-//  Copyright © 2022 Sunset Lake Software LLC. All rights reserved.
+//  Copyright © 2022 HDLX Software LLC. All rights reserved.
 //
 /// Fire effect, only useful for video
 public class FireEffectFilter: BasicOperation {

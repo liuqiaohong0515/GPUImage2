@@ -1228,4 +1228,12 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback:nil,
         filterOperationType:.singleInput
     ),
+    FilterOperation(
+        filter:{GlitchVertigoFilter()},
+        listName:"Glitch Vertigo",
+        titleName:"Glitch Vertigo",
+        sliderConfiguration:.disabled,
+        sliderUpdateCallback:nil,
+        filterOperationType:.singleInput
+    ),
 ]

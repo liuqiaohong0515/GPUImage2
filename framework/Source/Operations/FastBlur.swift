@@ -3,7 +3,7 @@
 //  GPUImage_macOS
 //
 //  Created by 刘乔泓 on 2022/2/27.
-//  Copyright © 2022 Sunset Lake Software LLC. All rights reserved.
+//  Copyright © 2022 HDLX Software LLC. All rights reserved.
 //
 /// 一个适合移动设备的高性能实时模糊，模糊数大了会断层
 public class FastBlur: BasicOperation {
