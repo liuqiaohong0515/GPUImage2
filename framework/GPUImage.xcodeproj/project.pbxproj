@@ -368,7 +368,9 @@
 		DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */; };
 		DE6ADBF228AD2B8D00F942B5 /* GlitchVertigoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */; };
 		DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */; };
-		DE6ADBF628AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */; };
+		DED6741128AF85AF00A5EF82 /* GlitchGlitchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */; };
+		DED6741228AF85B400A5EF82 /* GlitchVertigoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */; };
+		DED6741328AF85B800A5EF82 /* GlitchVertigoFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1374,7 +1376,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6ADBF628AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh in Resources */,
 				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
 				DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */,
@@ -1396,6 +1397,7 @@
 			files = (
 				DE2DC30928A8EA07008323B2 /* GlitchSoulOutFilter_GLES.fsh in Resources */,
 				DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */,
+				DED6741328AF85B800A5EF82 /* GlitchVertigoFilter_GLES.fsh in Resources */,
 				DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1668,6 +1670,7 @@
 				BC9E35C61E5257E400B8604F /* DivideBlend.swift in Sources */,
 				BC9E35C51E5257E000B8604F /* DifferenceBlend.swift in Sources */,
 				BC9E35851E52571600B8604F /* MedianFilter.swift in Sources */,
+				DED6741228AF85B400A5EF82 /* GlitchVertigoFilter.swift in Sources */,
 				BC9E353E1E524D8700B8604F /* Position.swift in Sources */,
 				BC38D53A22AEE188000AE4F9 /* RenderView-UIKit.swift in Sources */,
 				BC9E35C01E5257D000B8604F /* ChromaKeyBlend.swift in Sources */,
@@ -1753,6 +1756,7 @@
 				BC9E35B51E5257AC00B8604F /* Sharpen.swift in Sources */,
 				BC9E35791E5256EE00B8604F /* SepiaToneFilter.swift in Sources */,
 				BC9E357A1E5256F100B8604F /* WhiteBalance.swift in Sources */,
+				DED6741128AF85AF00A5EF82 /* GlitchGlitchFilter.swift in Sources */,
 				BC9E35811E52570A00B8604F /* Convolution3x3.swift in Sources */,
 				BC9E358F1E52573300B8604F /* Erosion.swift in Sources */,
 				BC38D52822AEE0B8000AE4F9 /* Camera.swift in Sources */,

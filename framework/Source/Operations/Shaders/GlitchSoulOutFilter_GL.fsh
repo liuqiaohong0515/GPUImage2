@@ -10,7 +10,10 @@ uniform float maxScale;
 void main() {
     
     //进度(0-1)
-    float progress = mod(time, duration)/duration;
+    float progress = mod(time, duration)/(duration*0.75); //放大之后暂停0.25的时间
+    if(progress > 1.0) {
+        progress = 1.0;
+    }
     //透明度(0-4)
     float alpha = maxAlpha * (1.0 - progress);
     //缩放比例
