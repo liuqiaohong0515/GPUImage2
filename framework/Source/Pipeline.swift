@@ -82,9 +82,9 @@ public extension ImageConsumer {
     }
 }
 
-class WeakImageConsumer {
-    weak var value:ImageConsumer?
-    let indexAtTarget:UInt
+public class WeakImageConsumer {
+    public weak var value:ImageConsumer?
+    public let indexAtTarget:UInt
     init (value:ImageConsumer, indexAtTarget:UInt) {
         self.indexAtTarget = indexAtTarget
         self.value = value
@@ -92,9 +92,9 @@ class WeakImageConsumer {
 }
 
 public class TargetContainer:Sequence {
-    var targets = [WeakImageConsumer]()
-    var count:Int { get {return targets.count}}
-    let dispatchQueue = DispatchQueue(label:"com.sunsetlakesoftware.GPUImage.targetContainerQueue", attributes: [])
+    public var targets = [WeakImageConsumer]()
+    public var count:Int { get {return targets.count}}
+    public let dispatchQueue = DispatchQueue(label:"com.sunsetlakesoftware.GPUImage.targetContainerQueue", attributes: [])
 
     public init() {
     }
@@ -136,7 +136,7 @@ public class TargetContainer:Sequence {
 }
 
 public class SourceContainer {
-    var sources:[UInt:ImageSource] = [:]
+    public var sources:[UInt:ImageSource] = [:]
     
     public init() {
     }
