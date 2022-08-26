@@ -22,8 +22,8 @@ void main() {
     
     //放大纹理坐标
     //将顶点坐标对应的纹理坐标的x值到纹理中点的距离,放大一定的比例. 这次我们是改变了纹理坐标, 而保持顶点坐标不变, 同样达到了拉伸的效果
-    float weakX = 0.5 + (textureCoordinate.x - 0.5) / scale;
-    float weakY = 0.5 + (textureCoordinate.y - 0.5) / scale;
+    float weakX = 0.5 + (textureCoordinate.x - 0.5) * scale;
+    float weakY = 0.5 + (textureCoordinate.y - 0.5) * scale;
     
     //得到放大的纹理坐标
     vec2 weakTextureCoords = vec2(weakX, weakY);

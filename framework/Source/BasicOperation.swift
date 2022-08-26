@@ -123,12 +123,12 @@ open class BasicOperation: ImageProcessingOperation {
         }
     }
     
-    public func internalRenderFunction(_ inputFramebuffer:Framebuffer, textureProperties:[InputTextureProperties]) {
+    open func internalRenderFunction(_ inputFramebuffer:Framebuffer, textureProperties:[InputTextureProperties]) {
         renderQuadWithShader(shader, uniformSettings:uniformSettings, vertexBufferObject:sharedImageProcessingContext.standardImageVBO, inputTextures:textureProperties)
         releaseIncomingFramebuffers()
     }
     
-    public func releaseIncomingFramebuffers() {
+    open func releaseIncomingFramebuffers() {
         var remainingFramebuffers = [UInt:Framebuffer]()
         // If all inputs are still images, have this output behave as one
         renderFramebuffer.timingStyle = .stillImage
@@ -151,7 +151,7 @@ open class BasicOperation: ImageProcessingOperation {
         inputFramebuffers = remainingFramebuffers
     }
     
-    public func sizeOfInitialStageBasedOnFramebuffer(_ inputFramebuffer:Framebuffer) -> GLSize {
+    open func sizeOfInitialStageBasedOnFramebuffer(_ inputFramebuffer:Framebuffer) -> GLSize {
         if let outputSize = overriddenOutputSize {
             return GLSize(outputSize)
         } else {
@@ -159,7 +159,7 @@ open class BasicOperation: ImageProcessingOperation {
         }
     }
     
-    public func initialTextureProperties() -> [InputTextureProperties] {
+    open func initialTextureProperties() -> [InputTextureProperties] {
         var inputTextureProperties = [InputTextureProperties]()
         
         if let outputRotation = overriddenOutputRotation {
@@ -175,14 +175,14 @@ open class BasicOperation: ImageProcessingOperation {
         return inputTextureProperties
     }
     
-    public func configureFramebufferSpecificUniforms(_ inputFramebuffer:Framebuffer) {
+    open func configureFramebufferSpecificUniforms(_ inputFramebuffer:Framebuffer) {
         if usesAspectRatio {
             let outputRotation = overriddenOutputRotation ?? inputFramebuffer.orientation.rotationNeededForOrientation(.portrait)
             uniformSettings["aspectRatio"] = inputFramebuffer.aspectRatioForRotation(outputRotation)
         }
     }
     
-    public func transmitPreviousImage(to target:ImageConsumer, atIndex:UInt) {
+    open func transmitPreviousImage(to target:ImageConsumer, atIndex:UInt) {
         sharedImageProcessingContext.runOperationAsynchronously{
             guard let renderFramebuffer = self.renderFramebuffer, (!renderFramebuffer.timingStyle.isTransient()) else { return }
             
