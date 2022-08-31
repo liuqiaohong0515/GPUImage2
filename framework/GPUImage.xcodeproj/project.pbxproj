@@ -368,6 +368,10 @@
 		DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE656F5A28ABEF4A00C4CBD7 /* GlitchGlitchFilter_GLES.fsh */; };
 		DE6ADBF228AD2B8D00F942B5 /* GlitchVertigoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */; };
 		DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */; };
+		DE6B421028BF3F9400A6EB5B /* ScatterWarp_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6B420E28BF3F9100A6EB5B /* ScatterWarp_GLES.fsh */; };
+		DE6B421128BF3F9800A6EB5B /* ScatterWarp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B420C28BF3F0A00A6EB5B /* ScatterWarp.swift */; };
+		DE6B421328BF447600A6EB5B /* ScatterWarp_GL.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6B421228BF447600A6EB5B /* ScatterWarp_GL.fsh */; };
+		DE6B421528BF46AF00A6EB5B /* ScatterWarp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B420C28BF3F0A00A6EB5B /* ScatterWarp.swift */; };
 		DED6741128AF85AF00A5EF82 /* GlitchGlitchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE656F5628ABDFCD00C4CBD7 /* GlitchGlitchFilter.swift */; };
 		DED6741228AF85B400A5EF82 /* GlitchVertigoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */; };
 		DED6741328AF85B800A5EF82 /* GlitchVertigoFilter_GLES.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */; };
@@ -720,6 +724,9 @@
 		DE6ADBF128AD2B8D00F942B5 /* GlitchVertigoFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlitchVertigoFilter.swift; path = Source/Operations/GlitchVertigoFilter.swift; sourceTree = "<group>"; };
 		DE6ADBF328AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchVertigoFilter_GL.fsh; path = Source/Operations/Shaders/GlitchVertigoFilter_GL.fsh; sourceTree = "<group>"; };
 		DE6ADBF528AD2C0C00F942B5 /* GlitchVertigoFilter_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = GlitchVertigoFilter_GLES.fsh; path = Source/Operations/Shaders/GlitchVertigoFilter_GLES.fsh; sourceTree = "<group>"; };
+		DE6B420C28BF3F0A00A6EB5B /* ScatterWarp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScatterWarp.swift; path = Source/Operations/ScatterWarp.swift; sourceTree = "<group>"; };
+		DE6B420E28BF3F9100A6EB5B /* ScatterWarp_GLES.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ScatterWarp_GLES.fsh; path = Source/Operations/Shaders/ScatterWarp_GLES.fsh; sourceTree = "<group>"; };
+		DE6B421228BF447600A6EB5B /* ScatterWarp_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ScatterWarp_GL.fsh; path = Source/Operations/Shaders/ScatterWarp_GL.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1104,6 +1111,9 @@
 				AFD9FCA2278B29DE007D49E2 /* FireEffect_GL.fsh */,
 				AF37CF1E27CB8772001C3074 /* FastBlur.swift */,
 				AF37CF2027CB87D9001C3074 /* FastBlur_GL.fsh */,
+				DE6B420C28BF3F0A00A6EB5B /* ScatterWarp.swift */,
+				DE6B420E28BF3F9100A6EB5B /* ScatterWarp_GLES.fsh */,
+				DE6B421228BF447600A6EB5B /* ScatterWarp_GL.fsh */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1379,6 +1389,7 @@
 				DE2DC2FE28A79680008323B2 /* GlitchShakeFilter_GL.fsh in Resources */,
 				AF37CF2127CB87D9001C3074 /* FastBlur_GL.fsh in Resources */,
 				DE6ADBF428AD2BF600F942B5 /* GlitchVertigoFilter_GL.fsh in Resources */,
+				DE6B421328BF447600A6EB5B /* ScatterWarp_GL.fsh in Resources */,
 				DE656F5928ABEF2C00C4CBD7 /* GlitchGlitchFilter_GL.fsh in Resources */,
 				DE2DC30B28A8EB66008323B2 /* GlitchSoulOutFilter_GL.fsh in Resources */,
 			);
@@ -1399,6 +1410,7 @@
 				DE2DC30228A7970B008323B2 /* GlitchShakeFilter_GLES.fsh in Resources */,
 				DED6741328AF85B800A5EF82 /* GlitchVertigoFilter_GLES.fsh in Resources */,
 				DE656F5C28ABF38D00C4CBD7 /* GlitchGlitchFilter_GLES.fsh in Resources */,
+				DE6B421028BF3F9400A6EB5B /* ScatterWarp_GLES.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1540,6 +1552,7 @@
 				BC7FD19F1CB20B1300037949 /* LineGenerator.swift in Sources */,
 				BC7FD1421CB0B47300037949 /* MonochromeFilter.swift in Sources */,
 				BCFF46C61CB968DE00A0C521 /* ImageBuffer.swift in Sources */,
+				DE6B421528BF46AF00A6EB5B /* ScatterWarp.swift in Sources */,
 				BC7FD0F31CB0612700037949 /* AddBlend.swift in Sources */,
 				BC7FD1931CB1D38500037949 /* Size.swift in Sources */,
 				BC4EE1741CB3711600AD8A65 /* GaussianBlur.swift in Sources */,
@@ -1729,6 +1742,7 @@
 				BC9E35621E5256A500B8604F /* OperationGroup.swift in Sources */,
 				BC9E35381E524D7E00B8604F /* OpenGLRendering.swift in Sources */,
 				BC9E35B41E5257A900B8604F /* ToonFilter.swift in Sources */,
+				DE6B421128BF3F9800A6EB5B /* ScatterWarp.swift in Sources */,
 				BC9E354F1E52508A00B8604F /* RawDataInput.swift in Sources */,
 				BC9E35681E5256BD00B8604F /* GammaAdjustment.swift in Sources */,
 				BC9E35A81E52578400B8604F /* Vignette.swift in Sources */,

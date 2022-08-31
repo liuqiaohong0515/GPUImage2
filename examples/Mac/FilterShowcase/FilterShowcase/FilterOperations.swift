@@ -835,6 +835,16 @@ let filterOperations: Array<FilterOperationInterface> = [
         filterOperationType:.singleInput
     ),
     FilterOperation(
+        filter:{ScatterWarp()},
+        listName:"ScatterWarp",
+        titleName:"ScatterWarp",
+        sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:0.1, initialValue:0.05),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.inputScatterRadius = sliderValue
+        },
+        filterOperationType:.singleInput
+    ),
+    FilterOperation(
         filter:{MedianFilter()},
         listName:"Median",
         titleName:"Median",
