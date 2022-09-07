@@ -13,11 +13,11 @@ public func defaultVertexShaderForInputs(_ inputCount:UInt) -> String {
 
 open class BasicOperation: ImageProcessingOperation {
     public let maximumInputs:UInt
-    public var overriddenOutputSize:Size?
-    public var overriddenOutputRotation:Rotation?
-    public var backgroundColor = Color.black
-    public var drawUnmodifiedImageOutsideOfMask:Bool = true
-    public var mask:ImageSource? {
+    open var overriddenOutputSize:Size?
+    open var overriddenOutputRotation:Rotation?
+    open var backgroundColor = Color.black
+    open var drawUnmodifiedImageOutsideOfMask:Bool = true
+    open var mask:ImageSource? {
         didSet {
             if let mask = mask {
                 maskImageRelay.newImageCallback = {[weak self] framebuffer in
@@ -33,21 +33,21 @@ open class BasicOperation: ImageProcessingOperation {
             }
         }
     }
-    public var activatePassthroughOnNextFrame:Bool = false
-    public var uniformSettings = ShaderUniformSettings()
+    open var activatePassthroughOnNextFrame:Bool = false
+    open var uniformSettings = ShaderUniformSettings()
 
     // MARK: -
     // MARK: Internal
 
-    public var targets = TargetContainer()
-    public var sources = SourceContainer()
-    public var shader:ShaderProgram
-    public var inputFramebuffers = [UInt:Framebuffer]()
-    public var renderFramebuffer:Framebuffer!
-    public var outputFramebuffer:Framebuffer { get { return renderFramebuffer } }
+    open var targets = TargetContainer()
+    open var sources = SourceContainer()
+    open var shader:ShaderProgram
+    open var inputFramebuffers = [UInt:Framebuffer]()
+    open var renderFramebuffer:Framebuffer!
+    open var outputFramebuffer:Framebuffer { get { return renderFramebuffer } }
     public let usesAspectRatio:Bool
     public let maskImageRelay = ImageRelay()
-    public var maskFramebuffer:Framebuffer?
+    open var maskFramebuffer:Framebuffer?
     
     // MARK: -
     // MARK: Initialization and teardown
