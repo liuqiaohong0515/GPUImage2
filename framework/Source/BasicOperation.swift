@@ -39,8 +39,8 @@ open class BasicOperation: ImageProcessingOperation {
     // MARK: -
     // MARK: Internal
 
-    public let targets = TargetContainer()
-    public let sources = SourceContainer()
+    public var targets = TargetContainer()
+    public var sources = SourceContainer()
     public var shader:ShaderProgram
     public var inputFramebuffers = [UInt:Framebuffer]()
     public var renderFramebuffer:Framebuffer!
