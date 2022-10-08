@@ -150,7 +150,10 @@ public class PictureInput: ImageSource {
 #endif
     }
 
-    public func processImage(synchronously:Bool = false) {
+    public func processImage(synchronously:Bool = false, timestamp:Timestamp? = nil) {
+        if let timestamp = timestamp { //make image frame like videoFrame process
+            self.imageFramebuffer.timingStyle = .videoFrame(timestamp: timestamp)
+        }
         if synchronously {
             sharedImageProcessingContext.runOperationSynchronously{
                 sharedImageProcessingContext.makeCurrentContext()
