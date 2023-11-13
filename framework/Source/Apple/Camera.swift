@@ -285,17 +285,21 @@ open class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBufferDe
     }
 
     public func startCapture() {
-        self.numberOfFramesCaptured = 0
-        self.totalFrameTimeDuringCapture = 0
-        
-        if (!captureSession.isRunning) {
-            captureSession.startRunning()
+        cameraProcessingQueue.async {
+            self.numberOfFramesCaptured = 0
+            self.totalFrameTimeDuringCapture = 0
+            
+            if (!self.captureSession.isRunning) {
+                self.captureSession.startRunning()
+            }
         }
     }
     
     public func stopCapture() {
-        if (captureSession.isRunning) {
-            captureSession.stopRunning()
+        cameraProcessingQueue.async {
+            if (self.captureSession.isRunning) {
+                self.captureSession.stopRunning()
+            }
         }
     }
     
