@@ -175,7 +175,7 @@ open class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBufferDe
     
     deinit {
         sharedImageProcessingContext.runOperationSynchronously{
-            self.stopCapture()
+            self.stopCapture(sync: true)
             self.videoOutput?.setSampleBufferDelegate(nil, queue:nil)
             self.audioOutput?.setSampleBufferDelegate(nil, queue:nil)
         }
@@ -295,10 +295,18 @@ open class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBufferDe
         }
     }
     
-    public func stopCapture() {
-        cameraProcessingQueue.async {
-            if (self.captureSession.isRunning) {
-                self.captureSession.stopRunning()
+    public func stopCapture(sync: Bool = false) {
+        if sync {
+            cameraProcessingQueue.sync {
+                if (self.captureSession.isRunning ?? false) {
+                    self.captureSession.stopRunning()
+                }
+            }
+        } else {
+            cameraProcessingQueue.async {
+                if (self.captureSession.isRunning ?? false) {
+                    self.captureSession.stopRunning()
+                }
             }
         }
     }
