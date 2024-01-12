@@ -8,7 +8,7 @@ public var lowProcessingQueue:DispatchQueue {
     return DispatchQueue.global(qos: .background)
 }
 
-func runAsynchronouslyOnMainQueue(_ mainThreadOperation:@escaping () -> ()) {
+public func runAsynchronouslyOnMainQueue(_ mainThreadOperation:@escaping () -> ()) {
     if (Thread.isMainThread) {
         mainThreadOperation()
     } else {
@@ -16,7 +16,7 @@ func runAsynchronouslyOnMainQueue(_ mainThreadOperation:@escaping () -> ()) {
     }
 }
 
-func runOnMainQueue(_ mainThreadOperation:() -> ()) {
+public func runOnMainQueue(_ mainThreadOperation:() -> ()) {
     if (Thread.isMainThread) {
         mainThreadOperation()
     } else {
@@ -24,7 +24,7 @@ func runOnMainQueue(_ mainThreadOperation:() -> ()) {
     }
 }
 
-func runOnMainQueue<T>(_ mainThreadOperation:() -> T) -> T {
+public func runOnMainQueue<T>(_ mainThreadOperation:() -> T) -> T {
     var returnedValue: T!
     runOnMainQueue {
         returnedValue = mainThreadOperation()
