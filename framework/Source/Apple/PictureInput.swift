@@ -91,6 +91,7 @@ public class PictureInput: ImageSource {
             let genericRGBColorspace = CGColorSpaceCreateDeviceRGB()
             
             let imageContext = CGContext(data:imageData, width:Int(widthToUseForTexture), height:Int(heightToUseForTexture), bitsPerComponent:8, bytesPerRow:Int(widthToUseForTexture) * 4, space:genericRGBColorspace,  bitmapInfo:CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
+            imageContext?.clear(CGRect.init(x: 0, y: 0, width: CGFloat(widthToUseForTexture), height: CGFloat(heightToUseForTexture))) //Fixed the issue where iPhone pro would have residual images of the previous frame.
             //        CGContextSetBlendMode(imageContext, kCGBlendModeCopy); // From Technical Q&A QA1708: http://developer.apple.com/library/ios/#qa/qa1708/_index.html
             imageContext?.draw(image, in:CGRect(x:0.0, y:0.0, width:CGFloat(widthToUseForTexture), height:CGFloat(heightToUseForTexture)))
         }
