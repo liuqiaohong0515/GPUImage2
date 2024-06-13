@@ -171,7 +171,7 @@ public class Framebuffer {
         framebufferRetainCount += 1
     }
 
-    func resetRetainCount() {
+    public func resetRetainCount() {
         framebufferRetainCount = 0
     }
     
