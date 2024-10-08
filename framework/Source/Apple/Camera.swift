@@ -251,9 +251,20 @@ open class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBufferDe
                 }
                 convertYUVToRGB(shader:self.yuvConversionShader!, luminanceFramebuffer:luminanceFramebuffer, chrominanceFramebuffer:chrominanceFramebuffer, resultFramebuffer:cameraFramebuffer, colorConversionMatrix:conversionMatrix)
             } else {
-                cameraFramebuffer = sharedImageProcessingContext.framebufferCache.requestFramebufferWithProperties(orientation:self.orientation ?? self.location.imageOrientation(), size:GLSize(width:GLint(bufferWidth), height:GLint(bufferHeight)), textureOnly:true)
-                glBindTexture(GLenum(GL_TEXTURE_2D), cameraFramebuffer.texture)
-                glTexImage2D(GLenum(GL_TEXTURE_2D), 0, GL_RGBA, GLsizei(bufferWidth), GLsizei(bufferHeight), 0, GLenum(GL_BGRA), GLenum(GL_UNSIGNED_BYTE), CVPixelBufferGetBaseAddress(cameraFrame))
+                var cameraGLTexture: CVOpenGLESTexture?
+                glActiveTexture(GLenum(GL_TEXTURE0))
+                let camreaGLTextureResult = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, sharedImageProcessingContext.coreVideoTextureCache, cameraFrame, nil, GLenum(GL_TEXTURE_2D), GL_RGBA, GLsizei(bufferWidth), GLsizei(bufferHeight), GLenum(GL_BGRA), GLenum(GL_UNSIGNED_BYTE), 0, &cameraGLTexture)
+                assert(camreaGLTextureResult == kCVReturnSuccess && cameraGLTexture != nil)
+                let camreaTexture = CVOpenGLESTextureGetName(cameraGLTexture!)
+                glBindTexture(GLenum(GL_TEXTURE_2D), camreaTexture)
+                glTexParameterf(GLenum(GL_TEXTURE_2D), GLenum(GL_TEXTURE_WRAP_S), GLfloat(GL_CLAMP_TO_EDGE));
+                glTexParameterf(GLenum(GL_TEXTURE_2D), GLenum(GL_TEXTURE_WRAP_T), GLfloat(GL_CLAMP_TO_EDGE));
+                
+                do {
+                    cameraFramebuffer = try Framebuffer(context: sharedImageProcessingContext, orientation: .portrait, size: GLSize(width:GLint(bufferWidth), height:GLint(bufferHeight)), textureOnly: true, overriddenTexture: camreaTexture)
+                } catch {
+                    fatalError("Could not create a framebuffer of the size (\(bufferWidth), \(bufferHeight)), error: \(error)")
+                }
             }
             CVPixelBufferUnlockBaseAddress(cameraFrame, CVPixelBufferLockFlags(rawValue:CVOptionFlags(0)))
             
