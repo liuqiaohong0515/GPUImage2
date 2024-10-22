@@ -277,11 +277,18 @@ extension String {
     }
     
     func withGLChar(_ operation:(UnsafePointer<GLchar>) -> ()) {
-        if let value = self.cString(using:String.Encoding.utf8) {
-            operation(UnsafePointer<GLchar>(value))
+        if let value = NSString.init(string: self).utf8String {
+            operation(value)
         } else {
             fatalError("Could not convert this string to UTF8: \(self)")
         }
+        
+        //This code in xcode16 release will crash
+//        if let value = self.cString(using:String.Encoding.utf8) {
+//            operation(UnsafePointer<GLchar>(value))
+//        } else {
+//            fatalError("Could not convert this string to UTF8: \(self)")
+//        }
     }
 }
 
